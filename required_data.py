@@ -1,4 +1,4 @@
-# class RequiredData:
+class RequiredData:
 
 #    """
 #    create new data
