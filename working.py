@@ -29,6 +29,13 @@ def lookfor_user(used_name, used_password):
 
     return user_exits
 
+def add_required(required):
+    """It will add the requires data
+    """
+    add_required =RequiredData(acc, acc_name, acc_password)
+
+    return add_required
+
 
 
 
