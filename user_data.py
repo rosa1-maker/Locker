@@ -1,22 +1,22 @@
 class UserData:
 
-    # """
-    # class to create new user acounts
-    # """
+    """
+    class to create new user acounts
+    """
 
-    # create_acount =[]
+    create_acount =[]
 
-    # def __init__(self, firstName, lastName, email, username, password):
+    def __init__(self, firstName, lastName, email, username, password):
 
-    #     """
-    #     initializes the class
-    #     """
+        """
+        initializes the class
+        """
 
-    #     self.fistName = firstName
-    #     self.lastName = lastName
-    #     self.email = email
-    #     self.username = username
-    #     self.password = password
+        self.fistName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.username = username
+        self.password = password
 
     # def save_account(self):
 
