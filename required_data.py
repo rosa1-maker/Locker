@@ -12,13 +12,13 @@ class RequiredData:
        self.username = username
        self.password = password
 
-#    def save_required(self):
+   def save_required(self):
 
-#        """
-#        save users objects to the users list
-#        """
+       """
+       save users objects to the users list
+       """
 
-#        RequiredData.required.append(self)
+       RequiredData.required.append(self)
 
 #     @classmethod
 
