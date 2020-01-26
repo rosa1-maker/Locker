@@ -53,6 +53,15 @@ def anypassword():
 
     return password
 
+def display_required():
+    """
+    returns the saved required data
+    """
+    return RequiredData.display_required()
+
+    
+
+
 
 
 
