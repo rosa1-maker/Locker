@@ -20,11 +20,10 @@ class RequiredData:
 
        RequiredData.required.append(self)
 
-#     @classmethod
+    # @classmethod
+    # def display_required(cls):
 
-#     def display_required(cls):
-
-#         """
-#         display the required
-#         """
-#         return cls.required   
+    #     """
+    #     display the required
+    #     """
+    #     return cls.required   
