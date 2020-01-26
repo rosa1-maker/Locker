@@ -18,13 +18,13 @@ class UserData:
         self.username = username
         self.password = password
 
-    # def save_account(self):
+    def save_account(self):
 
-    #     """
-    #     saves the new user to create_account list
-    #     """
+        """
+        saves the new user to create_account list
+        """
 
-    #     UserData.create_acount.append(self)
+        UserData.create_acount.append(self)
 
     #  @classmethod()
     #  def user_login(cls, used_name, used_password):
