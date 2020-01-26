@@ -20,7 +20,16 @@ def save_accounts(account)    :
     It saves the new user's account
     """
     account.save_account()
-    
+
+def lookfor_user(used_name, used_password):
+    """
+    It checks if the user already exists
+    """
+    user_exits = UserData.user_login(used_name, used_password)
+
+    return user_exits
+
+
 
 
 
