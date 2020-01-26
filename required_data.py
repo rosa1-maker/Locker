@@ -1,16 +1,16 @@
 class RequiredData:
 
-#    """
-#    create new data
-#    """
+   """
+   create new data
+   """
 
-#    required = []
+   required = []
 
-#    def _init_(self, platform, username, password):
+   def _init_(self, platform, username, password):
 
-#        self.platform = platform
-#        self.username = username
-#        self.password = password
+       self.platform = platform
+       self.username = username
+       self.password = password
 
 #    def save_required(self):
 
