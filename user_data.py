@@ -26,14 +26,14 @@ class UserData:
 
         UserData.create_acount.append(self)
 
-    #  @classmethod()
-    #  def user_login(cls, used_name, used_password):
-    #      """
-    #      checks whether user exist
-    #      """
-    #      for user in UserData.create_acount:
-    #          if user.username == used_name and user.password == used_password
-    #          return user
-    #      return False    
+     @classmethod()
+     def user_login(cls, used_name, used_password):
+         """
+         checks whether user exist
+         """
+         for user in UserData.create_acount:
+             if user.username == used_name and user.password == used_password
+             return user
+         return False    
 
 
