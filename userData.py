@@ -1,10 +1,10 @@
 class UserData:
 
     """
-    class to create new user acounts
+    class to create new user accounts
     """
 
-    create_acount =[]
+    create_account =[]
 
     def __init__(self, firstName, lastName, email, username, password):
 
@@ -24,14 +24,14 @@ class UserData:
         saves the new user to create_account list
         """
 
-        UserData.create_acount.append(self)
+        UserData.create_account.append(self)
 
-    #  @classmethod()
+     @classmethod
      def user_login(cls, used_name, used_password):
          """
          checks whether user exist
          """
-         for user in UserData.create_acount:
+         for user in UserData.create_account:
              if user.username == used_name and user.password == used_password
              return user
          return False    

@@ -29,12 +29,19 @@ def lookfor_user(used_name, used_password):
 
     return user_exits
 
-def add_required(required):
+def add_required(account, account_name, account_password):
     """It will add the requires data
     """
-    add_required =RequiredData(acc, acc_name, acc_password)
+    add_required =RequiredData(account, account_name, account_password)
 
     return add_required
+
+def save_required(required):
+     """
+     saves the created required
+     """
+     required.save_required()
+
 
 
 
