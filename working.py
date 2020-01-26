@@ -42,6 +42,18 @@ def save_required(required):
      """
      required.save_required()
 
+def anypassword():
+    """
+    generates a random password
+    """
+
+    characters = string.ascii_uppercase + string.ascii_lowercase + string.digits
+    size = random.randint(8, 12)
+    password =''.join(random.choice(characters) for x in range(size))
+
+    return password
+
+
 
 
 
