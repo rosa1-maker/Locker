@@ -1,39 +1,36 @@
-
-
 from requiredData import RequiredData
-
 
 class TestRequired(unittest.TestCase):
     def setUp(self):
         """
         setUp method
         """
-        self.new_required = RequiredData("Gmail") 
+        self.new_required = RequiredData("Gmail", "terry", "rosa2d") 
 
-#     def test_init(self):
-#         """
-#         testing initialization
-#         """
-#         self.assertEqual(self.new_credential.platform, "Gmail")
-#         self.assertEqual(self.new_credential.username, "cliff")
-#         self.assertEqual(self.new_credential.password, "lolololo")
+    def test_init(self):
+        """
+        testing initialization
+        """
+        self.assertEqual(self.new_required.platform, "Gmail")
+        self.assertEqual(self.new_required.username, "terry")
+        self.assertEqual(self.new_required.password, "rosa2d")
 
-#     def tearDown(self):
+    def tearDown(self):
     
-#         CredentialsData.credentials = []
+        RequiredData.required = []
 
-#     def test_save_credential(self):
-#         """
-#         test if credential is saved in the credentials list
-#         """
-#         self.new_credential.save_credential()  
-#         self.assertEqual(len(CredentialsData.credentials), 1)
+    def test_save_credential(self):
+        """
+        test if required data is saved in the required list
+        """
+        self.new_required.save_required()  
+        self.assertEqual(len(RequiredData.required), 1)
 
-#     def test_display_credentials(self):
-#         """
-#         test display credentials method
-#         """
-#         self.assertEqual(CredentialsData.display_credentials(),CredentialsData.credentials)
+    def test_display_required(self):
+        """
+        test display required data method
+        """
+        self.assertEqual(RequiredData.display_required(),RequiredData.required)
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
