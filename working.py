@@ -25,7 +25,7 @@ def lookfor_user(used_name, used_password):
     """
     It checks if the user already exists
     """
-    user_exits = UserData.user_login(used_name, used_password)
+    user_exits = userData.user_login(used_name, used_password)
 
     return user_exits
 

@@ -7,14 +7,14 @@ class TestRequired(unittest.TestCase):
         """
         setUp method
         """
-        self.new_required = RequiredData() 
+        self.new_required = RequiredData("Gmail", "Terry", "rosa2d") 
 
-    def test_init(self):
+    def test_init_(self):
         """
         testing initialization
         """
         self.assertEqual(self.new_required.platform, "Gmail")
-        self.assertEqual(self.new_required.username, "terry")
+        self.assertEqual(self.new_required.username, "Terry")
         self.assertEqual(self.new_required.password, "rosa2d")
 
     def tearDown(self):
