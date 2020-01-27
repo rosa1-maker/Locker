@@ -58,19 +58,51 @@ class RequiredData:
             print("To create password, type generate a password")
             password_choice = input()
              while True:
-                if pass_choice == "create":
+                if pass_choice == "generate":
                     print("Password:")
                     password = input()
                     break
                 elif pass_choice == "generate":
-                    password = randompassword()
+                    password = anypassword()
                     print('\n')
                     break
                 else:                    
-                    print("Type create or 'generate")
+                    print("Type 'generate")
                     break
-            save_accounts(new_users(firstname, lastname, emails, username, password))
+            save_accounts(new_users(firstName, lastName, emails, username, password))
             print("Created successfully.")
             print(f" Username: {username}, password: {password}.")
             print('\n')
             break
+
+         elif account_login == "signin":
+            print("Sign In:\n")
+            print("Username:")
+            username = input()
+            print('\n')
+            print("Password:")
+            password = input()
+            print('\n')
+            sign_in = check_user(username, password)
+            if sign_in == True:
+                break
+            print("Please sign up to access password locker.\n")
+
+        else:
+            print("Try the choices above")
+
+    while True:
+        print(f"Type create to add the required, saved to see the saved required data or exit to stop adding required data")      
+
+        required2 = input()
+
+        if required2 == 'create':
+            print("Type platform to add:")
+            plat_form = input()
+            print("\n")
+
+            print("Type in username for the platform:")
+            username2 = input()
+
+            print("To create a password, type create or to generate a password type generate")
+            pass_choice = input()
