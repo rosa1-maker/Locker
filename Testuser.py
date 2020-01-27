@@ -18,11 +18,11 @@ class TestuserData(unittest.TestCase):
         self.assertEqual(self.new_user.username, "Terry")
         self.assertEqual(self.new_user.password, "rosa2d")
 
-#     def tearDown(self):
-#         """
-#         restart
-#         """
-#         UserData.create_account = []
+    def tearDown(self):
+        """
+        restart
+        """
+        UserData.create_account = []
 
 #     def test_save_account(self):
 #         """
