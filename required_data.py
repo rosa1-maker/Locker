@@ -17,13 +17,19 @@ class RequiredData:
        """
        save users objects to the users list
        """
-
        RequiredData.required.append(self)
 
-    @classmethod
+       @classmethod
+
     def display_required(cls):
 
         """
-        display the required
+        displays the required data 
         """
-        return cls.required   
+        return cls.required  
+
+    def delete_required(required):
+        """
+        delete a required data
+        """
+    required.delete_required()    
