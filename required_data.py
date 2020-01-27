@@ -55,4 +55,22 @@ class RequiredData:
             print ("Email:")
             email = input()
             print('/n')
-            print("To create")
+            print("To create password, type generate a password")
+            password_choice = input()
+             while True:
+                if pass_choice == "create":
+                    print("Password:")
+                    password = input()
+                    break
+                elif pass_choice == "generate":
+                    password = randompassword()
+                    print('\n')
+                    break
+                else:                    
+                    print("Type create or 'generate")
+                    break
+            save_accounts(new_users(firstname, lastname, emails, username, password))
+            print("Created successfully.")
+            print(f" Username: {username}, password: {password}.")
+            print('\n')
+            break
