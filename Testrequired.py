@@ -4,11 +4,11 @@ from requiredData import RequiredData
 
 
 class TestRequired(unittest.TestCase):
-#     def setUp(self):
-#         """
-#         setUp method
-#         """
-#         self.new_credential = CredentialsData("Gmail", "cliff", "lolololo") 
+    def setUp(self):
+        """
+        setUp method
+        """
+        self.new_required = RequiredData("Gmail") 
 
 #     def test_init(self):
 #         """
