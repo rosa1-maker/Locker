@@ -1,22 +1,22 @@
-# import unittest
-# from userData import UserData
+import unittest
+from userData import UserData
 
-# class TestuserData(unittest.TestCase):
-#     def setUp(self):
-#         """
-#         set up method
-#         """
-#         self.new_user = UserData("cliff", "kasera", "ckasera@gmail.com", "Blankphrase", "lololo") 
+class TestuserData(unittest.TestCase):
+    def setUp(self):
+        """
+        set up method
+        """
+        self.new_user = UserData("cliff", "kasera", "ckasera@gmail.com", "Blankphrase", "lololo") 
 
-#     def test_init(self):
-#         """
-#         testing initialization of class
-#         """
-#         self.assertEqual(self.new_user.firstName, "cliff")
-#         self.assertEqual(self.new_user.lastName, "kasera")
-#         self.assertEqual(self.new_user.email, "ckasera@gmail.com")
-#         self.assertEqual(self.new_user.username, "Blankphrase")
-#         self.assertEqual(self.new_user.password, "lololo")
+    def test_init(self):
+        """
+        testing initialization of class
+        """
+        self.assertEqual(self.new_user.firstName, "Teresa")
+        self.assertEqual(self.new_user.lastName, "Wanjiku")
+        self.assertEqual(self.new_user.email, "teresawanjiku2000@gmail.com")
+        self.assertEqual(self.new_user.username, "Terry")
+        self.assertEqual(self.new_user.password, "rosa2d")
 
 #     def tearDown(self):
 #         """
