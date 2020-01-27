@@ -7,7 +7,9 @@ class RequiredData:
    required = [] 
 
    def _init_(self, platform, username, password):
-
+       """
+            creates an initailization for the new data
+       """
        self.platform = platform
        self.username = username
        self.password = password
@@ -19,13 +21,13 @@ class RequiredData:
        """
        RequiredData.required.append(self)
  
-    @classmethod
-    def display_required(cls):
+@classmethod
+def display_required(cls):
 
         """
         displays the required data 
         """
-        return cls.required  
+        return cls.display_required  
 
 
                                             

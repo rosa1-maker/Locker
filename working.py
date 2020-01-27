@@ -1,6 +1,6 @@
 import random
 import string
-
+import pyperclip
 from userData import UserData
 from required_data import RequiredData
 
@@ -57,7 +57,7 @@ def display_required():
     """
     returns the saved required data
     """
-    return RequiredData.display_required()
+    return display_required()
 
 def delete_required(required):
         """
@@ -114,7 +114,7 @@ def main():
             print("Password:")
             password = input()
             print('\n')
-            sign_in = check_user(username, password)
+            sign_in = lookfor_user(username, password)
             if sign_in == True:
                 break
             print("Please sign up to access password locker.\n")
