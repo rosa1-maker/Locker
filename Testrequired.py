@@ -1,9 +1,9 @@
 
 
-# from credentialsData import CredentialsData
+from requiredData import RequiredData
 
 
-# class TestCredentials(unittest.TestCase):
+class TestRequired(unittest.TestCase):
 #     def setUp(self):
 #         """
 #         setUp method
