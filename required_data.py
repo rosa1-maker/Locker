@@ -32,4 +32,27 @@ class RequiredData:
         """
         delete a required data
         """
-    required.delete_required()    
+        required.delete_required()   
+
+    def main():
+    print("\n")
+    print("Welcome to Password Locker")
+    print("This will store your required data and generate a password for you")
+
+    while True:
+        print("Type register to create account. If you already created one, type signin.")
+        account_login = input()
+        if account_login == "register":
+            print("First Name:")
+            firstName = input()
+            print('/n')
+            print("Last Name:")
+            lastName = input()
+            print('/n')
+            print("Username:")
+            username = input()
+            print('/n')
+            print ("Email:")
+            email = input()
+            print('/n')
+            print("To create")
