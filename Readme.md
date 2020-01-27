@@ -1,13 +1,6 @@
 # LOCKER
-## Descrfiption
+## Description
 Locker is a terminal run python application that allows users to store details i.e. usernames and passwords of their various accounts.
- 
- ## Test Driven Development
- <p>To test the app, run this commands in the terminal;</p>
-
-$ python3.6 user_test.py
-
-$ python3.6 credential_test.py
 
 ## Technologies used
 python3.6
@@ -21,6 +14,13 @@ python3.6
 <li>Step 3 : Open the terminal, go to the project directory and download the dependencies in the package.json using npm install</li>
 <li>Step 4 : Run working.py in terminal</li>
 </ol>
+
+ ## Test Driven Development
+ <p>To test the app, run this commands in the terminal;</p>
+
+$ python3.6 user_test.py
+
+$ python3.6 credential_test.py
 
 ## License
 The MIT License (MIT) Copyright (c) 2019 Teresa Wanjiku.
