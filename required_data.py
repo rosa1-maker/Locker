@@ -106,3 +106,44 @@ class RequiredData:
 
             print("To create a password, type create or to generate a password type generate")
             pass_choice = input()
+             while True:
+                if pass_choice == "generate":
+                    print("Password:")
+                    password2 = input()
+                    break
+                elif pass_choice == "generate":
+                    password2 = anypassword()
+                    print('\n')
+                    break
+                else:
+                    print("Type 'generate")
+                    break
+
+            save_required(add_required(plat_form, username2, password2))
+            print('\n')
+            print(f" {plat_form}: {username2}: {password2}")
+            print('\n')
+
+            elif required2 == 'saved':
+            print ("Enter your password: ")
+            requiredPassword = input()
+            print ("\n")        
+            if requiredPassword == password:       
+                display_required()
+                print("Required:\n")
+                for required in display_required():
+                    print(f"Platform => {required.platform}: Username => {required.username}: Password => {required.password}")
+                    print('\n')
+            else:
+                print("There are no more required data saved for now. Type create to create a required data.")
+                print('\n')
+        elif required2 == 'exit':
+                    break
+        else:
+            print("Sorry, try again.")
+            print('\n')
+
+
+if __name__ == '__main__':
+    main()
+                                            
