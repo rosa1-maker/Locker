@@ -26,6 +26,7 @@ class UserData:
 
         UserData.create_account.append(self)
 
+    @classmethod
     def user_login( self, cls, used_name, used_password):
         """
         checks whether user exist

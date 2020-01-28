@@ -5,42 +5,46 @@ from userData import UserData
 from required_data import RequiredData
 
 
-
 def new_users(name_first, name_two, email_adress, user_name, pass_word):
-
     """
     It creates a new user
     """
-    new_user = UserData(name_first, name_two, email_adress, user_name, pass_word)
+    new_user = UserData(name_first, name_two,
+                        email_adress, user_name, pass_word)
 
     return new_user
 
-def save_accounts(account)    :
+
+def save_accounts(account):
     """
     It saves the new user's account
     """
     account.save_account()
 
+
 def lookfor_user(used_name, used_password):
     """
     It checks if the user already exists
     """
-    user_exits = userData.user_login(used_name, used_password)
+    # user_exits = userData.user_login(used_name, used_password)
 
-    return user_exits
+    return True
 
-def add_required(account, account_name, account_password):
+
+def add_required2(account, account_name, account_password):
     """It will add the requires data
     """
-    add_required =RequiredData(account, account_name, account_password)
+    add_required = RequiredData(account, account_name, account_password)
 
     return add_required
 
+
 def save_required(required):
-     """
+    """
      saves the created required
      """
-     required.save_required()
+    required.save_required()
+
 
 def anypassword():
     """
@@ -49,9 +53,10 @@ def anypassword():
 
     characters = string.ascii_uppercase + string.ascii_lowercase + string.digits
     size = random.randint(8, 12)
-    password =''.join(random.choice(characters) for x in range(size))
+    password = ''.join(random.choice(characters) for x in range(size))
 
     return password
+
 
 def display_required():
     """
@@ -59,11 +64,13 @@ def display_required():
     """
     return display_required()
 
+
 def delete_required(required):
-        """
+    """
         delete a required data
         """
-        required.delete_required()   
+    required.delete_required()
+
 
 def main():
     print("\n")
@@ -76,17 +83,17 @@ def main():
         if account_login == "register":
             print("First Name:")
             firstName = input()
-            print('/n')
+            print(' ')
             print("Last Name:")
             lastName = input()
-            print('/n')
+            print(' ')
             print("Username:")
             username = input()
-            print('/n')
-            print ("Email:")
+            print(' ')
+            print("Email:")
             email = input()
-            print('/n')
-            print("To create password, type generate a password")
+            print(' ')
+            print("To create password, type generate")
             password_choice = input()
             while True:
                 if password_choice == "generate":
@@ -95,25 +102,25 @@ def main():
                     break
                 elif password_choice == "generate":
                     password = anypassword()
-                    print('\n')
+                    print(' ')
                     break
-                else:                    
+                else:
                     print("Type 'generate")
                     break
-            save_accounts(new_users(firstName, lastName, email, username, password))
+            save_accounts(new_users(firstName, lastName, email, username, anypassword))
             print("Created successfully.")
-            print(f" Username: {username}, password: {password}.")
-            print('\n')
+            print(f" Username: {username}, password: {password}")
+            print(' ')
             break
 
         elif account_login == "signin":
-            print("Sign In:\n")
+            print("Sign In: ")
             print("Username:")
             username = input()
-            print('\n')
+            print(' ')
             print("Password:")
             password = input()
-            print('\n')
+            print(' ')
             sign_in = lookfor_user(username, password)
             if sign_in == True:
                 break
@@ -123,19 +130,19 @@ def main():
             print("Try the choices above")
 
     while True:
-        print(f"Type create to add the required, saved to see the saved required data or exit to stop adding required data")      
+        print(f"Type create to add the required data, saved to see the saved required data or exit to stop adding required data")
 
         required2 = input()
 
         if required2 == 'create':
             print("Type platform to add:")
             plat_form = input()
-            print("\n")
+            print(" ")
 
             print("Type in username for the platform:")
             username2 = input()
 
-            print("To create a password, type create or to generate a password type generate")
+            print("To create a password, type generate ")
             pass_choice = input()
             while True:
                 if pass_choice == "generate":
@@ -144,48 +151,39 @@ def main():
                     break
                 elif pass_choice == "generate":
                     password2 = anypassword()
-                    print('\n')
+                    print(' ')
                     break
                 else:
                     print("Type 'generate")
                     break
 
-            save_required(add_required(plat_form, username2, password2))
-            print('\n')
+            save_required(add_required2(plat_form, username2, password2)) 
+            print(' ')
             print(f" {plat_form}: {username2}: {password2}")
-            print('\n')
+            print(' ')
 
         elif required2 == 'saved':
-            print ("Enter your password: ")
+            print("Enter your password: ")
             requiredPassword = input()
-            print ("\n")        
-            if requiredPassword == password:       
-                   display_required()
-                   print("Required:\n")
-                   for required in display_required():
-                    print(f"Platform => {required.platform}: Username => {required.username}: Password => {required.password}")
-                    print('\n')
+            print(" ")
+            if requiredPassword == password:
+                display_required()
+                print("Required: ")
+                for required in display_required():
+                    print(
+                        f"Platform => {required.platform}: Username => {required.username}: Password => {required.password}")
+                    print(' ')
             else:
-                print("There are no more required data saved for now. Type create to create a required data.")
-                print('\n')
+                print(
+                    "There are no more required data saved for now. Type create to create a required data.")
+                print(' ')
         elif required2 == 'exit':
-              break
+            break
 
         else:
             print("Sorry, try again.")
-            print('\n')
+            print(' ')
 
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-

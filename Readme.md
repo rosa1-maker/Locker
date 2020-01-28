@@ -15,6 +15,14 @@ python3.6
 <li>Step 4 : Run working.py in terminal</li>
 </ol>
 
+## Behaviour Driven Development
+ Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Display codes for navigation | **In terminal: $./working.py** | Welcome to Password Locker.This will store your required data and generate a password for you|
+| Display prompt for creating an account or for login| **Enter: Ac** | Type register to create account. If you already created one, type signin|
+| Display codes for navigation | **Successful login** | Type create to add the required data, saved to see the saved required data or exit to stop adding required data |
+| Display prompt for creating a required data info | **Enter: req** | Enter the platform name, credentials, password and email address |
+| Display a list of saved required data info | **Enter: dis** | Prints a listof the saved required data |
  ## Test Driven Development
  <p>To test the app, run this commands in the terminal;</p>
 
