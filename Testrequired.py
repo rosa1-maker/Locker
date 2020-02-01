@@ -26,7 +26,7 @@ class TestRequired(unittest.TestCase):
         test if required data is saved in the required list
         """
         self.new_required.save_required()  
-        self.assertEqual(len(RequiredData.required), 1)
+        self.assertEqual(len(RequiredData.required), 2)
 
     def test_display_required(self):
         """

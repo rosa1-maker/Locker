@@ -9,8 +9,7 @@ def new_users(name_first, name_two, email_adress, user_name, pass_word):
     """
     It creates a new user
     """
-    new_user = UserData(name_first, name_two,
-                        email_adress, user_name, pass_word)
+    new_user = UserData(name_first, name_two, email_adress, user_name, pass_word)
 
     return new_user
 
@@ -26,12 +25,12 @@ def lookfor_user(used_name, used_password):
     """
     It checks if the user already exists
     """
-    # user_exits = userData.user_login(used_name, used_password)
+    user_exits = UserData.user_login(used_name, used_password)
 
-    return True
+    return user_exits
 
 
-def add_required2(account, account_name, account_password):
+def add_required(account, account_name, account_password):
     """It will add the requires data
     """
     add_required = RequiredData(account, account_name, account_password)
@@ -70,6 +69,8 @@ def delete_required(required):
         delete a required data
         """
     required.delete_required()
+
+    
 
 
 def main():
@@ -132,9 +133,9 @@ def main():
     while True:
         print(f"Type create to add the required data, saved to see the saved required data or exit to stop adding required data")
 
-        required2 = input()
+        required = input()
 
-        if required2 == 'create':
+        if required == 'create':
             print("Type platform to add:")
             plat_form = input()
             print(" ")
@@ -157,12 +158,12 @@ def main():
                     print("Type 'generate")
                     break
 
-            save_required(add_required2(plat_form, username2, password2)) 
+            save_required(add_required(plat_form, username2, password2)) 
             print(' ')
             print(f" {plat_form}: {username2}: {password2}")
             print(' ')
 
-        elif required2 == 'saved':
+        elif required == 'saved':
             print("Enter your password: ")
             requiredPassword = input()
             print(" ")
@@ -177,7 +178,7 @@ def main():
                 print(
                     "There are no more required data saved for now. Type create to create a required data.")
                 print(' ')
-        elif required2 == 'exit':
+        elif required == 'exit':
             break
 
         else:

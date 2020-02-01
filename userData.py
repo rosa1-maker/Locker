@@ -17,7 +17,7 @@ class UserData:
         self.email = email
         self.username = username
         self.password = password
-
+    # @classmethod
     def save_account(self):
 
         """
@@ -27,7 +27,7 @@ class UserData:
         UserData.create_account.append(self)
 
     @classmethod
-    def user_login( self, cls, used_name, used_password):
+    def user_login(cls, used_name, used_password):
         """
         checks whether user exist
         """
