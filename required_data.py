@@ -21,12 +21,14 @@ class RequiredData:
        """
        RequiredData.required.append(self)
 @classmethod
-def display_required(cls):
+def display_required(self):
+    """
+    displays the required data 
+    """
+    return self.display_required
 
-        """
-        displays the required data 
-        """
-        return cls.display_required  
+
+          
 
 
                                             
