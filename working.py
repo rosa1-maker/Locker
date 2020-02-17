@@ -1,10 +1,12 @@
+#!/usr/bin/env python3.6
 import random
 import string
 import pyperclip
 from userData import UserData
 from required_data import RequiredData
+import sys
 
-
+sys.setrecursionlimit(10**6) 
 def new_users(name_first, name_two, email_adress, user_name, pass_word):
     """
     It creates a new user
@@ -66,8 +68,8 @@ def display_required():
 
 def delete_required(required):
     """
-        delete a required data
-        """
+    delete a required data
+    """
     required.delete_required()
 
     
@@ -166,7 +168,7 @@ def main():
         elif required == 'saved':
             print("Enter your password: ")
             requiredPassword = input()
-            print(" ")
+            print(' ')
             if requiredPassword == password:
                 display_required()
                 print("Required: ")
